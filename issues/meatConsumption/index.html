@@ -156,9 +156,12 @@ function pledge(e) {
 //# sourceURL=pen.js
     </script>
 
-<script async>
-	await includeHTML();
-	document.getElementById('tBIssues').classList.add("active");
+<script>
+	async function quickRun() {
+		await includeHTML();
+		document.getElementById('tBIssues').classList.add("active");
+	}
+	quickRun();
 </script>
 
 </body>
