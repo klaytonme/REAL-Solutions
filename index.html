@@ -25,7 +25,7 @@
   window.console = window.console || function(t) {};
 </script>
 
-  
+	<script src='/REAL-Solutions/resources/sourceDocs/includeHTML.js'></script>
   
   <script>
   if (document.location.search.match(/type=embed/gi)) {
@@ -41,6 +41,7 @@
 
 <body>
 	<!--topheader starts-->
+	<div include-html="/REAL-Solutions/resources/sourceDocs/header.html"></div>
 	<div class="top-header">
 		<div class="container">
 			<div class="top-menu">
@@ -242,10 +243,15 @@
 	<div class="copywrite text-center">
 		<p>2015 &copy Template By <a href="https://w3layouts.com/">W3layouts</a></p>
 	</div>
+	<div include-html="/REAL-Solutions/resources/sourceDocs/footer.html"></div>
     <script src="https://static.codepen.io/assets/common/stopExecutionOnTimeout-157cd5b220a5c80d4ff8e0e70ac069bffd87a61252088146915e8726e5d9f147.js"></script>
 
   <script src='https://netdna.bootstrapcdn.com/bootstrap/3.1.1/js/bootstrap.min.js'></script>
 <script src='https://cdnjs.cloudflare.com/ajax/libs/jquery/3.5.1/jquery.min.js'></script>  
+	
+	<script>
+		includeHTML();
+	</script>
 
 </body>
 
