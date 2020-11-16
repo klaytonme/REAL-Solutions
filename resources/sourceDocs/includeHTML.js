@@ -1,11 +1,11 @@
 if (document.location.search.match(/type=embed/gi)) {
     window.parent.postMessage("resize", "*");
   }
-	function includeHTML() {
+	async function includeHTML(page) {
 		var z, i, elmnt, file, xhttp;
 		/* Loop through a collection of all HTML elements: */
 		z = document.getElementsByTagName("*");
-		for (i = 0; i < z.length; i++) {
+		await for (i = 0; i < z.length; i++) {
 			elmnt = z[i];
 			/*search for elements with a certain atrribute:*/
 			file = elmnt.getAttribute("include-html");
@@ -27,4 +27,5 @@ if (document.location.search.match(/type=embed/gi)) {
 				return;
 			}
 		}
+		document.getElementById(page).classList.add('active');
 	}
