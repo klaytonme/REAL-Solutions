@@ -192,13 +192,28 @@
 	<script src='https://cdnjs.cloudflare.com/ajax/libs/jquery/3.5.1/jquery.min.js'></script>
 	
 	<script>
-		function pledge (e) {
-			e.style = "background:#fff; color:#2e817b;";
+		var p1Pledges = 15;
+		var p2Pledges = 20;
+		var p3Pledges = 23;
+
+		function pledge (e, pledgeId) {
+			e.style = "background:#fff; color:#2e817b; cursor:context-menu;";
 			e.innerHTML = "Thanks for joining the pledge!";
 			e.onclick=null;
+			if (pledgeId == 1) {
+				p1Pledges += 1;
+			} else if (pledgeId == 2) {
+				p2Pledges += 1;
+			} else if (pledgeId == 3) {
+				p3Pledges += 1;
+			} 
 		}
 
 		document.getElementById('tBIssues').classList.add("active");
+
+		setInterval(function(){document.getElementById('p1PledgeDisplay').innerHTML = p1Pledges;
+				       document.getElementById('p2PledgeDisplay').innerHTML = p2Pledges;
+				       document.getElementById('p3PledgeDisplay').innerHTML = p3Pledges;}, 200);
 	</script>
 </body>
 
